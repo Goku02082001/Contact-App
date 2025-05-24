@@ -1,0 +1,86 @@
+.tag-filter-container {
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3);
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.tag-filter {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+}
+
+.tag-filter:hover {
+  border-color: var(--color-primary-light);
+  background-color: rgba(52, 101, 164, 0.05);
+}
+
+.tag-filter.selected {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.favorite-filter {
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  transition: all var(--transition-fast);
+}
+
+.favorite-filter:hover {
+  border-color: var(--color-favorite);
+  background-color: rgba(255, 51, 102, 0.05);
+}
+
+.favorite-filter.active {
+  background-color: var(--color-favorite);
+  color: white;
+  border-color: var(--color-favorite);
+}
+
+.favorite-filter::before {
+  content: '❤';
+  font-size: 10px;
+}
+
+.clear-filters {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.clear-filters:hover {
+  color: var(--color-primary-dark);
+}
